@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/jerry81/AliSDKTest/issues"
   },
-  "homepage": "https://github.com/jerry81/AliSDKTest#readme"
+  "homepage": "https://github.com/jerry81/AliSDKTest#readme",
+  "dependencies": {
+    "aliyun-sdk": "^1.12.5",
+    "dotenv": "^16.0.3"
+  }
 }
