@@ -1,5 +1,9 @@
 import ALY from 'aliyun-sdk';
 import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+
+import SlsLogger from 'ali-sls';
+
+
 dotenv.config()
 // console.log('ALY.SLS', ALY.default.SLS)
 
@@ -12,6 +16,20 @@ var sls = new ALY.SLS({
 
 var projectName = "k8s-log-ce1d89e1ffb644a42ad94a226e5e8aa52";
 var logStoreName = "aws";
+
+const slsLogger = new SlsLogger({
+  endpoint: "k8s-log-ce1d89e1ffb644a42ad94a226e5e8aa52.cn-shanghai.log.aliyuncs.com",
+  accessKey: process.env.ALI_KEY,
+  accessSecret: process.env.ALI_SECRET,
+  logstore: logStoreName,
+  source: "test",
+  topic: "test",
+  compress: false,
+  level: "INFO",
+  disabled: false,
+})
+
+slsLogger.info("hello")
 
 // var logGroup = {
 //   logs : [{

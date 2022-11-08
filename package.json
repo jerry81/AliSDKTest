@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jerry81/AliSDKTest#readme",
   "dependencies": {
+    "ali-sls": "^1.2.0",
     "aliyun-sdk": "^1.12.5",
     "dotenv": "^16.0.3"
   }
